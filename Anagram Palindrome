@@ -1,0 +1,14 @@
+# 5. Verificar se a string é um anagrama de um palindromo:
+# Input: "racecar"
+# Output: true
+
+def anagram_palindrome(string):
+    string = string.replace(" ", "").lower()
+    return sum(string.count(char) % 2 != 0 for char in set(string)) <= 1
+
+
+input_string = "racecar"
+
+anagram_palindrome = anagram_palindrome(input_string)
+
+print(anagram_palindrome)
